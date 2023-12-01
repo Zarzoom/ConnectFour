@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectFour", "ConnectFour\ConnectFour.csproj", "{EC4B9850-0C00-4F67-B818-D9B2D2C1910E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectFourTest", "ConnectFourTest\ConnectFourTest.csproj", "{4609C683-CCFF-43C3-A33E-17C126F95781}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC4B9850-0C00-4F67-B818-D9B2D2C1910E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC4B9850-0C00-4F67-B818-D9B2D2C1910E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC4B9850-0C00-4F67-B818-D9B2D2C1910E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC4B9850-0C00-4F67-B818-D9B2D2C1910E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4609C683-CCFF-43C3-A33E-17C126F95781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4609C683-CCFF-43C3-A33E-17C126F95781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4609C683-CCFF-43C3-A33E-17C126F95781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4609C683-CCFF-43C3-A33E-17C126F95781}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
