@@ -3,4 +3,9 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::4609C683-CCFF-43C3-A33E-17C126F95781::net7.0::ConnectFourTest.whenGivenA2DArrayWithPlayerTwoHavingFourAcross.ThenItCanFindFourAcross&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8a254527_002D5358_002D41f3_002D97e8_002Da928b0968f53/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="whenGivenA2DArrayWithPlayerOneHavingFourAcross" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::4609C683-CCFF-43C3-A33E-17C126F95781::net7.0::ConnectFourTest.whenGivenA2DArrayWithPlayerOneHavingFourAcross&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

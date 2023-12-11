@@ -2,7 +2,7 @@
 using System;
 namespace ConnectFour.Services;
 
-public class BoardStateManager2
+public class BoardStateManager
 {
     public Player FourInARow(Player[,] connectFourGame1)
     {
