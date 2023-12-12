@@ -13,14 +13,13 @@ public class BoardStateManager
             while (columnIndex < connectFourGame1.GetLength(1))
             {
                 //right
-                if (columnIndex < connectFourGame1.GetLength(1))
+                if (columnIndex + 1 < connectFourGame1.GetLength(1))
                 {
                     if (connectFourGame1[rowIndex, columnIndex + 1] == connectFourGame1[rowIndex, columnIndex])
                     {
                         int variableIndex = columnIndex + 1;
                         int inARow = 0;
-                        //add if statement logic from comment to while loops
-                        while (connectFourGame1[rowIndex, variableIndex] == connectFourGame1[rowIndex, columnIndex] && columnIndex < connectFourGame1.GetLength(1))
+                        while (variableIndex < connectFourGame1.GetLength(1) && connectFourGame1[rowIndex, variableIndex] == connectFourGame1[rowIndex, columnIndex] )
                         {
                             inARow++;
                             variableIndex++;
@@ -34,12 +33,12 @@ public class BoardStateManager
                 }
 
                 //left
-                if (columnIndex !< 0){
+                if (columnIndex -1 >= 0){
                     if (connectFourGame1[rowIndex, columnIndex - 1] != 0)
                     {
                         int variableIndex = columnIndex - 1;
                         int inARow = 0;
-                        while (connectFourGame1[rowIndex, variableIndex] == connectFourGame1[rowIndex, columnIndex] && columnIndex >= 0 )
+                        while ( variableIndex >= 0 && connectFourGame1[rowIndex, variableIndex] == connectFourGame1[rowIndex, columnIndex])
                         {
                             inARow++;
                             variableIndex--;
@@ -52,12 +51,12 @@ public class BoardStateManager
                     }
                 }
                 //up
-                if (rowIndex !>= connectFourGame1.GetLength(0)){
+                if (rowIndex + 1 < connectFourGame1.GetLength(0)){
                     if (connectFourGame1[rowIndex + 1, columnIndex] != 0)
                     {
                         int variableIndex = rowIndex + 1;
                         int inARow = 0;
-                        while (connectFourGame1[variableIndex, columnIndex] == connectFourGame1[rowIndex, columnIndex] && rowIndex !>= connectFourGame1.GetLength(0))
+                        while (variableIndex < connectFourGame1.GetLength(0) && connectFourGame1[variableIndex, columnIndex] == connectFourGame1[rowIndex, columnIndex] )
                         {
                             inARow++;
                             variableIndex++;
@@ -70,12 +69,12 @@ public class BoardStateManager
                     }
                 }
                 //down
-                if (rowIndex >=0){
+                if (rowIndex - 1 >= 0){
                     if (connectFourGame1[rowIndex - 1, columnIndex] != 0)
                     {
                         int variableIndex = rowIndex - 1;
                         int inARow = 0;
-                        while (connectFourGame1[variableIndex, columnIndex] == connectFourGame1[rowIndex, columnIndex] && rowIndex >= 0)
+                        while ( variableIndex >= 0 && connectFourGame1[variableIndex, columnIndex] == connectFourGame1[rowIndex, columnIndex])
                         {
                             inARow++;
                             variableIndex--;
@@ -89,15 +88,15 @@ public class BoardStateManager
                 }
                 
                 //top right diagonal
-                if (columnIndex ! >= connectFourGame1.GetLength(1) || rowIndex ! >= connectFourGame1.GetLength(0))
+                if (columnIndex + 1 < connectFourGame1.GetLength(1) || rowIndex + 1 < connectFourGame1.GetLength(0))
                 {
                     if (connectFourGame1[rowIndex + 1, columnIndex + 1] != 0)
                     {
                         int variableRowIndex = rowIndex + 1;
                         int variableColumnIndex = columnIndex + 1;
                         int inARow = 0;
-                        while (connectFourGame1[variableRowIndex, variableColumnIndex] ==
-                               connectFourGame1[rowIndex, columnIndex] && columnIndex ! >= connectFourGame1.GetLength(1) && rowIndex ! >= connectFourGame1.GetLength(0))
+                        while (variableColumnIndex < connectFourGame1.GetLength(1) && variableRowIndex < connectFourGame1.GetLength(0) && connectFourGame1[variableRowIndex, variableColumnIndex] ==
+                               connectFourGame1[rowIndex, columnIndex] )
                         {
                             inARow++;
                             variableRowIndex++;
@@ -112,14 +111,14 @@ public class BoardStateManager
                 }
 
                 //botom left diagonal
-                if (columnIndex ! < 0 || rowIndex >= 0)
+                if (columnIndex - 1 >= 0 || rowIndex - 1 >= 0)
                 {
                     if (connectFourGame1[rowIndex - 1, columnIndex - 1] != 0)
                     {
                         int variableRowIndex = rowIndex - 1;
                         int variableColumnIndex = columnIndex - 1;
                         int inARow = 0;
-                        while (connectFourGame1[variableRowIndex, variableColumnIndex] == connectFourGame1[rowIndex, columnIndex] && rowIndex >= 0 && columnIndex ! < 0)
+                        while (variableRowIndex >= 0 && variableColumnIndex >= 0 && connectFourGame1[variableRowIndex, variableColumnIndex] == connectFourGame1[rowIndex, columnIndex])
                         {
                             inARow++;
                             variableRowIndex--;
@@ -134,15 +133,15 @@ public class BoardStateManager
                 }
 
                 //top left diagonal
-                if (columnIndex ! >= connectFourGame1.GetLength(1) || rowIndex >= 0)
+                if (columnIndex + 1 < connectFourGame1.GetLength(1) || rowIndex - 1 >= 0)
                 {
                     if (connectFourGame1[rowIndex - 1, columnIndex + 1] != 0)
                     {
                         int variableRowIndex = rowIndex - 1;
                         int variableColumnIndex = columnIndex + 1;
                         int inARow = 0;
-                        while (connectFourGame1[variableRowIndex, variableColumnIndex] ==
-                               connectFourGame1[rowIndex, columnIndex] && columnIndex ! >= connectFourGame1.GetLength(1) && rowIndex >= 0)
+                        while (variableColumnIndex < connectFourGame1.GetLength(1) && variableRowIndex >= 0 && connectFourGame1[variableRowIndex, variableColumnIndex] ==
+                               connectFourGame1[rowIndex, columnIndex])
                         {
                             inARow++;
                             variableRowIndex--;
@@ -157,15 +156,15 @@ public class BoardStateManager
                 }
 
                 //bottom right diagonal
-                if (columnIndex ! < 0 || rowIndex ! >= connectFourGame1.GetLength(0))
+                if (columnIndex - 1 >= 0 || rowIndex + 1 < connectFourGame1.GetLength(0))
                 {
                     if (connectFourGame1[rowIndex + 1, columnIndex - 1] != 0)
                     {
                         int variableRowIndex = rowIndex + 1;
                         int variableColumnIndex = columnIndex - 1;
                         int inARow = 0;
-                        while (connectFourGame1[variableRowIndex, variableColumnIndex] ==
-                               connectFourGame1[rowIndex, columnIndex] && columnIndex ! < 0 && rowIndex ! >= connectFourGame1.GetLength(0))
+                        while (variableColumnIndex >= 0 && variableRowIndex < connectFourGame1.GetLength(0) && connectFourGame1[variableRowIndex, variableColumnIndex] ==
+                               connectFourGame1[rowIndex, columnIndex])
                         {
                             inARow++;
                             variableRowIndex++;
