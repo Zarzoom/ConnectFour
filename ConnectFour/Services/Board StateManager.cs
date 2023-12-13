@@ -12,173 +12,197 @@ public class BoardStateManager
             int columnIndex = 0;
             while (columnIndex < connectFourGame1.GetLength(1))
             {
-                //right
-                if (columnIndex + 1 < connectFourGame1.GetLength(1))
+                if (connectFourGame1[rowIndex, columnIndex] != 0)
                 {
-                    if (connectFourGame1[rowIndex, columnIndex + 1] == connectFourGame1[rowIndex, columnIndex])
+                    //right
+                    if (columnIndex + 1 < connectFourGame1.GetLength(1))
                     {
-                        int variableIndex = columnIndex + 1;
-                        int inARow = 0;
-                        while (variableIndex < connectFourGame1.GetLength(1) && connectFourGame1[rowIndex, variableIndex] == connectFourGame1[rowIndex, columnIndex] )
+                        if (connectFourGame1[rowIndex, columnIndex + 1] == connectFourGame1[rowIndex, columnIndex])
                         {
-                            inARow++;
-                            variableIndex++;
-                        }
+                            int variableIndex = columnIndex + 1;
+                            int inARow = 1;
+                            while (variableIndex < connectFourGame1.GetLength(1) &&
+                                   connectFourGame1[rowIndex, variableIndex] == connectFourGame1[rowIndex, columnIndex])
+                            {
+                                inARow++;
+                                variableIndex++;
+                            }
 
-                        if (inARow >= 4)
+                            if (inARow >= 4)
+                            {
+                                return connectFourGame1[rowIndex, columnIndex];
+                            }
+                        }
+                    }
+
+                    //left
+                    if (columnIndex - 1 >= 0)
+                    {
+                        if (connectFourGame1[rowIndex, columnIndex - 1] != 0)
                         {
-                            return connectFourGame1[rowIndex, columnIndex];
+                            int variableIndex = columnIndex - 1;
+                            int inARow = 1;
+                            while (variableIndex >= 0 && connectFourGame1[rowIndex, variableIndex] ==
+                                   connectFourGame1[rowIndex, columnIndex])
+                            {
+                                inARow++;
+                                variableIndex--;
+                            }
+
+                            if (inARow >= 4)
+                            {
+                                return connectFourGame1[rowIndex, columnIndex];
+                            }
+                        }
+                    }
+
+                    //up
+                    if (rowIndex + 1 < connectFourGame1.GetLength(0))
+                    {
+                        if (connectFourGame1[rowIndex + 1, columnIndex] != 0)
+                        {
+                            int variableIndex = rowIndex + 1;
+                            int inARow = 1;
+                            while (variableIndex < connectFourGame1.GetLength(0) &&
+                                   connectFourGame1[variableIndex, columnIndex] ==
+                                   connectFourGame1[rowIndex, columnIndex])
+                            {
+                                inARow++;
+                                variableIndex++;
+                            }
+
+                            if (inARow >= 4)
+                            {
+                                return connectFourGame1[rowIndex, columnIndex];
+                            }
+                        }
+                    }
+
+                    //down
+                    if (rowIndex - 1 >= 0)
+                    {
+                        if (connectFourGame1[rowIndex - 1, columnIndex] != 0)
+                        {
+                            int variableIndex = rowIndex - 1;
+                            int inARow = 1;
+                            while (variableIndex >= 0 && connectFourGame1[variableIndex, columnIndex] ==
+                                   connectFourGame1[rowIndex, columnIndex])
+                            {
+                                inARow++;
+                                variableIndex--;
+                            }
+
+                            if (inARow >= 4)
+                            {
+                                return connectFourGame1[rowIndex, columnIndex];
+                            }
+                        }
+                    }
+
+                    //top right diagonal
+                    if (columnIndex + 1 < connectFourGame1.GetLength(1) && rowIndex + 1 < connectFourGame1.GetLength(0))
+                    {
+                        if (connectFourGame1[rowIndex + 1, columnIndex + 1] != 0)
+                        {
+                            int variableRowIndex = rowIndex + 1;
+                            int variableColumnIndex = columnIndex + 1;
+                            int inARow = 1;
+                            while (variableColumnIndex < connectFourGame1.GetLength(1) &&
+                                   variableRowIndex < connectFourGame1.GetLength(0) &&
+                                   connectFourGame1[variableRowIndex, variableColumnIndex] ==
+                                   connectFourGame1[rowIndex, columnIndex])
+                            {
+                                inARow++;
+                                variableRowIndex++;
+                                variableColumnIndex++;
+                            }
+
+                            if (inARow >= 4)
+                            {
+                                return connectFourGame1[rowIndex, columnIndex];
+                            }
+                        }
+                    }
+
+                    //botom left diagonal
+                    if (columnIndex - 1 >= 0 && rowIndex - 1 >= 0)
+                    {
+                        if (connectFourGame1[rowIndex - 1, columnIndex - 1] != 0)
+                        {
+                            int variableRowIndex = rowIndex - 1;
+                            int variableColumnIndex = columnIndex - 1;
+                            int inARow = 1;
+                            while (variableRowIndex >= 0 && variableColumnIndex >= 0 &&
+                                   connectFourGame1[variableRowIndex, variableColumnIndex] ==
+                                   connectFourGame1[rowIndex, columnIndex])
+                            {
+                                inARow++;
+                                variableRowIndex--;
+                                variableColumnIndex--;
+                            }
+
+                            if (inARow >= 4)
+                            {
+                                return connectFourGame1[rowIndex, columnIndex];
+                            }
+                        }
+                    }
+
+                    //top left diagonal
+                    if (columnIndex + 1 < connectFourGame1.GetLength(1) && rowIndex - 1 >= 0)
+                    {
+                        if (connectFourGame1[rowIndex - 1, columnIndex + 1] != 0)
+                        {
+                            int variableRowIndex = rowIndex - 1;
+                            int variableColumnIndex = columnIndex + 1;
+                            int inARow = 1;
+                            while (variableColumnIndex < connectFourGame1.GetLength(1) && variableRowIndex >= 0 &&
+                                   connectFourGame1[variableRowIndex, variableColumnIndex] ==
+                                   connectFourGame1[rowIndex, columnIndex])
+                            {
+                                inARow++;
+                                variableRowIndex--;
+                                variableColumnIndex++;
+                            }
+
+                            if (inARow >= 4)
+                            {
+                                return connectFourGame1[rowIndex, columnIndex];
+                            }
+                        }
+                    }
+
+                    //bottom right diagonal
+                    if (columnIndex - 1 >= 0 && rowIndex + 1 < connectFourGame1.GetLength(0))
+                    {
+                        if (connectFourGame1[rowIndex + 1, columnIndex - 1] != 0)
+                        {
+                            int variableRowIndex = rowIndex + 1;
+                            int variableColumnIndex = columnIndex - 1;
+                            int inARow = 1;
+                            while (variableColumnIndex >= 0 && variableRowIndex < connectFourGame1.GetLength(0) &&
+                                   connectFourGame1[variableRowIndex, variableColumnIndex] ==
+                                   connectFourGame1[rowIndex, columnIndex])
+                            {
+                                inARow++;
+                                variableRowIndex++;
+                                variableColumnIndex--;
+                            }
+
+                            if (inARow >= 4)
+                            {
+                                return connectFourGame1[rowIndex, columnIndex];
+                            }
                         }
                     }
                 }
 
-                //left
-                if (columnIndex -1 >= 0){
-                    if (connectFourGame1[rowIndex, columnIndex - 1] != 0)
-                    {
-                        int variableIndex = columnIndex - 1;
-                        int inARow = 0;
-                        while ( variableIndex >= 0 && connectFourGame1[rowIndex, variableIndex] == connectFourGame1[rowIndex, columnIndex])
-                        {
-                            inARow++;
-                            variableIndex--;
-                        }
-
-                        if (inARow >= 4)
-                        {
-                            return connectFourGame1[rowIndex, columnIndex];
-                        }
-                    }
-                }
-                //up
-                if (rowIndex + 1 < connectFourGame1.GetLength(0)){
-                    if (connectFourGame1[rowIndex + 1, columnIndex] != 0)
-                    {
-                        int variableIndex = rowIndex + 1;
-                        int inARow = 0;
-                        while (variableIndex < connectFourGame1.GetLength(0) && connectFourGame1[variableIndex, columnIndex] == connectFourGame1[rowIndex, columnIndex] )
-                        {
-                            inARow++;
-                            variableIndex++;
-                        }
-
-                        if (inARow >= 4)
-                        {
-                            return connectFourGame1[rowIndex, columnIndex];
-                        }
-                    }
-                }
-                //down
-                if (rowIndex - 1 >= 0){
-                    if (connectFourGame1[rowIndex - 1, columnIndex] != 0)
-                    {
-                        int variableIndex = rowIndex - 1;
-                        int inARow = 0;
-                        while ( variableIndex >= 0 && connectFourGame1[variableIndex, columnIndex] == connectFourGame1[rowIndex, columnIndex])
-                        {
-                            inARow++;
-                            variableIndex--;
-                        }
-
-                        if (inARow >= 4)
-                        {
-                            return connectFourGame1[rowIndex, columnIndex];
-                        }
-                    }
-                }
-                
-                //top right diagonal
-                if (columnIndex + 1 < connectFourGame1.GetLength(1) || rowIndex + 1 < connectFourGame1.GetLength(0))
-                {
-                    if (connectFourGame1[rowIndex + 1, columnIndex + 1] != 0)
-                    {
-                        int variableRowIndex = rowIndex + 1;
-                        int variableColumnIndex = columnIndex + 1;
-                        int inARow = 0;
-                        while (variableColumnIndex < connectFourGame1.GetLength(1) && variableRowIndex < connectFourGame1.GetLength(0) && connectFourGame1[variableRowIndex, variableColumnIndex] ==
-                               connectFourGame1[rowIndex, columnIndex] )
-                        {
-                            inARow++;
-                            variableRowIndex++;
-                            variableColumnIndex++;
-                        }
-
-                        if (inARow >= 4)
-                        {
-                            return connectFourGame1[rowIndex, columnIndex];
-                        }
-                    }
-                }
-
-                //botom left diagonal
-                if (columnIndex - 1 >= 0 || rowIndex - 1 >= 0)
-                {
-                    if (connectFourGame1[rowIndex - 1, columnIndex - 1] != 0)
-                    {
-                        int variableRowIndex = rowIndex - 1;
-                        int variableColumnIndex = columnIndex - 1;
-                        int inARow = 0;
-                        while (variableRowIndex >= 0 && variableColumnIndex >= 0 && connectFourGame1[variableRowIndex, variableColumnIndex] == connectFourGame1[rowIndex, columnIndex])
-                        {
-                            inARow++;
-                            variableRowIndex--;
-                            variableColumnIndex--;
-                        }
-
-                        if (inARow >= 4)
-                        {
-                            return connectFourGame1[rowIndex, columnIndex];
-                        }
-                    }
-                }
-
-                //top left diagonal
-                if (columnIndex + 1 < connectFourGame1.GetLength(1) || rowIndex - 1 >= 0)
-                {
-                    if (connectFourGame1[rowIndex - 1, columnIndex + 1] != 0)
-                    {
-                        int variableRowIndex = rowIndex - 1;
-                        int variableColumnIndex = columnIndex + 1;
-                        int inARow = 0;
-                        while (variableColumnIndex < connectFourGame1.GetLength(1) && variableRowIndex >= 0 && connectFourGame1[variableRowIndex, variableColumnIndex] ==
-                               connectFourGame1[rowIndex, columnIndex])
-                        {
-                            inARow++;
-                            variableRowIndex--;
-                            variableColumnIndex++;
-                        }
-
-                        if (inARow >= 4)
-                        {
-                            return connectFourGame1[rowIndex, columnIndex];
-                        }
-                    }
-                }
-
-                //bottom right diagonal
-                if (columnIndex - 1 >= 0 || rowIndex + 1 < connectFourGame1.GetLength(0))
-                {
-                    if (connectFourGame1[rowIndex + 1, columnIndex - 1] != 0)
-                    {
-                        int variableRowIndex = rowIndex + 1;
-                        int variableColumnIndex = columnIndex - 1;
-                        int inARow = 0;
-                        while (variableColumnIndex >= 0 && variableRowIndex < connectFourGame1.GetLength(0) && connectFourGame1[variableRowIndex, variableColumnIndex] ==
-                               connectFourGame1[rowIndex, columnIndex])
-                        {
-                            inARow++;
-                            variableRowIndex++;
-                            variableColumnIndex--;
-                        }
-
-                        if (inARow >= 4)
-                        {
-                            return connectFourGame1[rowIndex, columnIndex];
-                        }
-                    }
-                }
+                columnIndex++;
             }
+
+            rowIndex++;
         }
-        throw new NotImplementedException();
+
+        return Player.NoOne;
     }
 }

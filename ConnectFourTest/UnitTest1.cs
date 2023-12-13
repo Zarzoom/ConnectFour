@@ -54,7 +54,7 @@ public class whenGivenA2DArrayWithPlayerTwoHavingFourAcross
     {
         BoardStateManager boardStateManager = new BoardStateManager();
         Player actual = boardStateManager.FourInARow(connectFourGame1);
-        Player expected = Player.PlayerOne;
+        Player expected = Player.PlayerTwo;
         Assert.AreEqual(expected, actual);
     }  
 }
@@ -118,3 +118,4 @@ public class WhenGivenA2DArrayAndPlayerOneHasFourDiagonal
         Assert.AreEqual(expected, actual);
     }
 }
+//write a diagonal test going the other way with player two winning.
