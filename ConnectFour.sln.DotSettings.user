@@ -11,5 +11,6 @@
     &lt;TestId&gt;NUnit3x::4609C683-CCFF-43C3-A33E-17C126F95781::net7.0::ConnectFourTest.whenGivenA2DArrayWithPlayerTwoHavingFourAcross&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::4609C683-CCFF-43C3-A33E-17C126F95781::net7.0::ConnectFourTest.WhenGivenA2DArrayWithPlayerOneHavingFourDown&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::4609C683-CCFF-43C3-A33E-17C126F95781::net7.0::ConnectFourTest.WhenGivenA2DArrayAndPlayerOneHasFourDiagonal&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::4609C683-CCFF-43C3-A33E-17C126F95781::net7.0::ConnectFourTest.WhenGivenA2DArrayAndPlayerOneHasFourDiagonalUp&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
