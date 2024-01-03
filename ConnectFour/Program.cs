@@ -1,14 +1,28 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using ConnectFour.Data;
+using ConnectFour.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<WeatherForecastService>();
-
+builder.Services.AddSingleton<BoardStateManager>();
+var  MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+  
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+        policy  =>
+        {
+            policy.WithOrigins("http://localhost:3000",
+                "http://localhost:8000");
+        });
+}); 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -19,13 +33,10 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
-
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.MapBlazorHub();
-app.MapFallbackToPage("/_Host");
-
+app.UseSwagger();
+app.UseSwaggerUI();
+// app.UseHttpsRedirection();
+app.UseAuthorization();
+app.MapControllers();
+app.UseCors(x => x.AllowAnyMethod().AllowAnyHeader().SetIsOriginAllowed(origin => true).AllowCredentials());
 app.Run();

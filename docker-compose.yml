@@ -1,0 +1,6 @@
+﻿services:
+  connectfour:
+    image: connectfour
+    build:
+      context: .
+      dockerfile: ConnectFour/Dockerfile

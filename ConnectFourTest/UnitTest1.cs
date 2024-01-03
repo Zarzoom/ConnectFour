@@ -5,14 +5,14 @@ namespace ConnectFourTest;
 
 public class whenGivenA2DArrayWithPlayerOneHavingFourAcross
 {
-    Player[,] connectFourGame1 = new Player [6, 7]
+    Player[][] connectFourGame1 = new Player [6][]
     {
-        { 0, 0, 0, 0, 0, 0, 0 },
-        { 0, 0, 0, 0, 0, 0, 0 },
-        { 0, 0, 0, 0, 0, 0, 0 },
-        { 0, 0, 0, 0, 0, 0, 0 },
-        { 0, 0, 0, 0, 0, 0, 0 },
-        { (Player)2, (Player)1, (Player)1, (Player)1, (Player)1, 0, 0 },
+        new Player[] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+        new Player[] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+        new Player[] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+        new Player[] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+        new Player[] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+        new Player[] { Player.PlayerTwo, Player.PlayerOne, Player.PlayerOne, Player.PlayerOne, Player.PlayerOne, Player.NoOne, Player.NoOne },
     };
     [SetUp]
     public void Setup()
@@ -33,14 +33,14 @@ public class whenGivenA2DArrayWithPlayerOneHavingFourAcross
 
 public class whenGivenA2DArrayWithPlayerTwoHavingFourAcross
 {
-    Player[,] connectFourGame1 = new Player [6, 7]
+    Player[][] connectFourGame1 = new Player [6][]
     {
-        { 0, 0, 0, 0, 0, 0, 0 },
-        { 0, 0, 0, 0, 0, 0, 0 },
-        { 0, 0, 0, 0, 0, 0, 0 },
-        { 0, 0, 0, 0, 0, 0, 0 },
-        { 0, 0, 0, 0, 0, 0, 0 },
-        { (Player)2, (Player)2, (Player)2, (Player)2, (Player)1, 0, 0 },
+       new Player[] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+       new Player[] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+       new Player[]{ Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+       new Player[]{ Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+       new Player[]{ Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+       new Player[] { Player.PlayerTwo, Player.PlayerTwo, Player.PlayerTwo, Player.PlayerTwo, Player.PlayerOne, Player.NoOne, Player.NoOne },
     };
     [SetUp]
     public void Setup()
@@ -61,14 +61,14 @@ public class whenGivenA2DArrayWithPlayerTwoHavingFourAcross
 
 public class WhenGivenA2DArrayWithPlayerOneHavingFourDown
 {
-    Player[,] connectFourGame2 = new Player [6, 7]
+    Player[][] connectFourGame2 = new Player [6][]
     {
-        { 0, 0, 0, 0, 0, 0, 0 },
-        { 0, 0, 0, (Player)1, 0, 0, 0 },
-        { 0, 0, 0, (Player)1, 0, 0, 0 },
-        { 0, 0, 0, (Player)1, 0, 0, 0 },
-        { 0, 0, 0, (Player)1, (Player)2, 0, 0 },
-        { 0, 0, 0, 0, 0, 0, 0 },
+        new Player[]{ Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+        new Player[]{ Player.NoOne, Player.NoOne, Player.NoOne, Player.PlayerOne, Player.NoOne, Player.NoOne, Player.NoOne },
+        new Player[]{ Player.NoOne, Player.NoOne, Player.NoOne, Player.PlayerOne, Player.NoOne, Player.NoOne, Player.NoOne },
+        new Player[]{ Player.NoOne, Player.NoOne, Player.NoOne, Player.PlayerOne, Player.NoOne, Player.NoOne, Player.NoOne },
+        new Player[]{ Player.NoOne, Player.NoOne, Player.NoOne, Player.PlayerOne, Player.PlayerTwo, Player.NoOne, Player.NoOne },
+        new Player[]{ Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
     };
     [SetUp]
     public void Setup()
@@ -92,14 +92,14 @@ public class WhenGivenA2DArrayWithPlayerOneHavingFourDown
 
 public class WhenGivenA2DArrayAndPlayerOneHasFourDiagonalDown
 {
-    Player [,] connectFourGame3 = new Player [6, 7]
+    Player [][] connectFourGame3 = new Player [6] []
     {
-        { 0, 0, 0, 0, 0, 0, 0 },
-        { 0, 0, (Player)1, 0, 0, 0, 0 },
-        { 0, (Player)2, 0, (Player)1, 0, 0, 0 },
-        { 0, 0, 0, 0, (Player)1, 0, 0 },
-        { 0, 0, 0, 0, 0, (Player)1, 0 },
-        { 0, 0, 0, 0, 0, 0, 0 },
+        new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+        new Player [] { Player.NoOne, Player.NoOne, Player.PlayerOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+        new Player [] { Player.NoOne, Player.PlayerTwo, Player.NoOne, Player.PlayerOne, Player.NoOne, Player.NoOne, Player.NoOne },
+        new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.PlayerOne, Player.NoOne, Player.NoOne },
+        new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.PlayerOne, Player.NoOne },
+        new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
     };
     [SetUp]
     public void Setup()
@@ -121,14 +121,14 @@ public class WhenGivenA2DArrayAndPlayerOneHasFourDiagonalDown
 //write a diagonal test going the other way with player two winning.
 public class WhenGivenA2DArrayAndPlayerOneHasFourDiagonalUp
 {
-    Player [,] connectFourGame3 = new Player [6, 7]
+    Player [][] connectFourGame3 = new Player [6][]
     {
-        { 0, 0, 0, 0, 0, 0, 0 },
-        { 0, 0, 0, (Player) 1, (Player)2, 0, 0 },
-        { 0, 0, 0,(Player) 2, 0, 0, 0 },
-        { 0, 0,(Player) 2, 0, 0, 0, 0 },
-        { 0,(Player) 2, 0, 0, 0, 0, 0 },
-        { 0, 0, 0, 0, 0, 0, 0 },
+        new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+        new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.PlayerOne, Player.PlayerTwo, Player.NoOne, Player.NoOne },
+        new Player [] { Player.NoOne, Player.NoOne, Player.NoOne,Player.PlayerTwo, Player.NoOne, Player.NoOne, Player.NoOne },
+        new Player [] { Player.NoOne, Player.NoOne,Player.PlayerTwo, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+        new Player [] { Player.NoOne,Player.PlayerTwo, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+        new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
     };
     [SetUp]
     public void Setup()
@@ -149,14 +149,14 @@ public class WhenGivenA2DArrayAndPlayerOneHasFourDiagonalUp
 
     public class WhenGivenAnEmpty2DArrayAPlayerAndAColumn
     {
-        Player [,] connectFourGame4 = new Player [6, 7]
+        Player [][] connectFourGame4 = new Player [6][]
         {
-            { 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0 },
+            new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+            new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+            new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+            new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+            new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+            new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
         };
 
         int column = 3;
@@ -173,21 +173,21 @@ public class WhenGivenA2DArrayAndPlayerOneHasFourDiagonalUp
         public void ThenItCanFindTheNextOpenSpace()
         {
             Player expected = Player.PlayerOne;
-            Player actual = connectFourGame4[5, 3];
+            Player actual = connectFourGame4[5][3];
             Assert.AreEqual(expected, actual);
         }
     }
 
     public class WhenGivenAPartialyPopulated2DArrayAPlayerAndAColumn
     {
-        Player [,] connectFourGame5 = new Player [6, 7]
+        Player [][] connectFourGame5 = new Player [6][]
         {
-            { 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, (Player) 1, 0, 0, 0 },
-            { 0, 0, 0, (Player) 1, 0, 0, 0 },
+            new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+            new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+            new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+            new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+            new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.PlayerOne, Player.NoOne, Player.NoOne, Player.NoOne },
+            new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.PlayerOne, Player.NoOne, Player.NoOne, Player.NoOne },
         };
 
         int column = 3;
@@ -205,7 +205,7 @@ public class WhenGivenA2DArrayAndPlayerOneHasFourDiagonalUp
        public void ThenItCanFindTheNextOpenSpace()
        {
            Player expected = Player.PlayerOne;
-           Player actual = connectFourGame5[3, 3];
+           Player actual = connectFourGame5[3][3];
            Assert.AreEqual(expected, actual);
        }
 
@@ -213,14 +213,14 @@ public class WhenGivenA2DArrayAndPlayerOneHasFourDiagonalUp
 
     public class WhenGivenAPartiallyPopulated2DArrayAPlayerAndAColumn
     {
-        Player[,] connectFourGame6 = new Player [6, 7]
+        Player[][] connectFourGame6 = new Player [6][]
         {
-            { 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, (Player) 1, 0, 0, 0, 0 },
-            { 0, 0, (Player) 1, 0, 0, 0, 0 },
+            new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+            new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+            new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+            new Player [] { Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+            new Player [] { Player.NoOne, Player.NoOne, Player.PlayerOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
+            new Player [] { Player.NoOne, Player.NoOne, Player.PlayerOne, Player.NoOne, Player.NoOne, Player.NoOne, Player.NoOne },
         };
 
         int column = 2;
@@ -238,7 +238,7 @@ public class WhenGivenA2DArrayAndPlayerOneHasFourDiagonalUp
         public void ThenItCanFindTheNextOpenSpace()
         {
             Player expected = Player.PlayerTwo;
-            Player actual = connectFourGame6[3, 2];
+            Player actual = connectFourGame6[3][2];
             Assert.AreEqual(expected, actual);
         }
     }

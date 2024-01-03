@@ -5,12 +5,20 @@
     &lt;TestId&gt;NUnit3x::4609C683-CCFF-43C3-A33E-17C126F95781::net7.0::ConnectFourTest.whenGivenA2DArrayWithPlayerOneHavingFourAcross&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8a254527_002D5358_002D41f3_002D97e8_002Da928b0968f53/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="whenGivenA2DArrayWithPlayerOneHavingFourAcross" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8a254527_002D5358_002D41f3_002D97e8_002Da928b0968f53/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="whenGivenA2DArrayWithPlayerOneHavingFourAcross" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::4609C683-CCFF-43C3-A33E-17C126F95781::net7.0::ConnectFourTest.whenGivenA2DArrayWithPlayerOneHavingFourAcross&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::4609C683-CCFF-43C3-A33E-17C126F95781::net7.0::ConnectFourTest.whenGivenA2DArrayWithPlayerTwoHavingFourAcross&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::4609C683-CCFF-43C3-A33E-17C126F95781::net7.0::ConnectFourTest.WhenGivenA2DArrayWithPlayerOneHavingFourDown&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::4609C683-CCFF-43C3-A33E-17C126F95781::net7.0::ConnectFourTest.WhenGivenA2DArrayAndPlayerOneHasFourDiagonal&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::4609C683-CCFF-43C3-A33E-17C126F95781::net7.0::ConnectFourTest.WhenGivenA2DArrayAndPlayerOneHasFourDiagonalUp&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=982576c7_002D523d_002D4fae_002Da934_002D4059c1460d9d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="whenGivenA2DArrayWithPlayerOneHavingFourAcross #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e87814ba_002Ded9a_002D44d3_002D9c1c_002D56106a1e3d05/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="whenGivenA2DArrayWithPlayerOneHavingFourAcross #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::4609C683-CCFF-43C3-A33E-17C126F95781::net7.0::ConnectFourTest.whenGivenA2DArrayWithPlayerOneHavingFourAcross&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
